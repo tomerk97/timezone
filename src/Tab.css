@@ -16,7 +16,7 @@ button{
 		font-weight: bolder;
 		margin-right: 1em;
 		margin-bottom: 1em;
-		border-radius: 2em;
+		border-radius: 20px 10%;
 		background: #ABD6DFFF;
 		cursor: pointer;
 		box-shadow: 1px 1px 10px 2px gray;
