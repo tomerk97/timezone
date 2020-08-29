@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+
+@font-face {
+  font-family: 'ShareTechMono';
+  src: local('ShareTechMono'), url(./fonts/ShareTechMono.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Viafont';
+  src: local('CalamityJaneNf-MOWP'), url(./fonts/Viafont.otf) format('opentype');
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +47,85 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#nav{
+  display: block;
+  width: 100%;
+  height: 3em;
+  background-color:#ABD6DFFF;
+  position: absolute;
+  top:0;
+  overflow: hidden;
+}
+
+
+#navlist{
+  display: contents;
+  font-family:Viafont;
+  letter-spacing: 0.2em;
+  font-weight: bolder;
+
+
+}
+
+#online{
+  font-size: 2em;
+  list-style-type: none;
+  position: relative;
+  margin-left: 2em;
+  margin-top: 0.2em;
+}
+
+
+#divone{
+margin-left:4em;
+margin-bottom: 2em;
+grid-column-start: 1;
+}
+
+#tzline{
+  margin-top: 3em;
+}
+
+#choose{
+  font-size: 2em;
+}
+
+ #container{
+  margin-top: 4em;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  width:100%;
+    
+}
+
+#Analog{
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin-left: 30%;
+  margin-top: 7%;
+
+}
+
+
+#buttonsdiv{
+    margin-left:4em;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    max-width:40em;
+    justify-content:space-between;
+    grid-column-start:1;
+
+}
+html{
+  background-color:#E7EBE0FF;
+
+
+} 
+
+p{
+  font-family:ShareTechMono;
 }
