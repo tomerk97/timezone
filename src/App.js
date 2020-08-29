@@ -103,10 +103,10 @@ class App extends Component{
         <Tab onClick={()=>this.handleClick('Asia/Shanghai')} value="China"/>
         <Tab onClick={()=>this.handleClick('Europe/London')} value="London"/>
         <Tab onClick={()=>this.handleClick('Europe/Berlin')} value="Berlin"/>
+        <Tab onClick={()=>this.handleClick('Pacific/Honolulu')} value="Hawaii"/>  
         <Tab onClick={()=>this.handleClick('America/Los_Angeles')} value="Los Angeles"/>
         <Tab onClick={()=>this.handleClick('America/New_York')} value="New York"/>
         <Tab onClick={()=>this.handleClick('America/Chicago')} value="Chicago"/>
-        <Tab onClick={()=>this.handleClick('Pacific/Honolulu')} value="Hawaii"/>  
       </div>
 
       <div  id="Analog"> 
