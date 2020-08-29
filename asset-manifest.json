@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/tomerk97/timezone/static/css/main.5e3a2d6c.chunk.css",
+    "main.js": "/tomerk97/timezone/static/js/main.073245f0.chunk.js",
+    "main.js.map": "/tomerk97/timezone/static/js/main.073245f0.chunk.js.map",
+    "runtime-main.js": "/tomerk97/timezone/static/js/runtime-main.5d52d0c2.js",
+    "runtime-main.js.map": "/tomerk97/timezone/static/js/runtime-main.5d52d0c2.js.map",
+    "static/css/2.8b2fdb78.chunk.css": "/tomerk97/timezone/static/css/2.8b2fdb78.chunk.css",
+    "static/js/2.7b397ac0.chunk.js": "/tomerk97/timezone/static/js/2.7b397ac0.chunk.js",
+    "static/js/2.7b397ac0.chunk.js.map": "/tomerk97/timezone/static/js/2.7b397ac0.chunk.js.map",
+    "index.html": "/tomerk97/timezone/index.html",
+    "precache-manifest.87374df97eb5404aaff0ca3937c370da.js": "/tomerk97/timezone/precache-manifest.87374df97eb5404aaff0ca3937c370da.js",
+    "service-worker.js": "/tomerk97/timezone/service-worker.js",
+    "static/css/2.8b2fdb78.chunk.css.map": "/tomerk97/timezone/static/css/2.8b2fdb78.chunk.css.map",
+    "static/css/main.5e3a2d6c.chunk.css.map": "/tomerk97/timezone/static/css/main.5e3a2d6c.chunk.css.map",
+    "static/js/2.7b397ac0.chunk.js.LICENSE.txt": "/tomerk97/timezone/static/js/2.7b397ac0.chunk.js.LICENSE.txt",
+    "static/media/Tab.css": "/tomerk97/timezone/static/media/ShareTechMono.b8927cf9.otf",
+    "static/media/App.css": "/tomerk97/timezone/static/media/Viafont.8917a885.otf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5d52d0c2.js",
+    "static/css/2.8b2fdb78.chunk.css",
+    "static/js/2.7b397ac0.chunk.js",
+    "static/css/main.5e3a2d6c.chunk.css",
+    "static/js/main.073245f0.chunk.js"
+  ]
+}
