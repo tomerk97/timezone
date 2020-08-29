@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/timezone/static/css/main.1ce43a2e.chunk.css",
-    "main.js": "/timezone/static/js/main.c7a4f559.chunk.js",
-    "main.js.map": "/timezone/static/js/main.c7a4f559.chunk.js.map",
+    "main.css": "/timezone/static/css/main.dbd0b2e4.chunk.css",
+    "main.js": "/timezone/static/js/main.f9c0771a.chunk.js",
+    "main.js.map": "/timezone/static/js/main.f9c0771a.chunk.js.map",
     "runtime-main.js": "/timezone/static/js/runtime-main.81bee160.js",
     "runtime-main.js.map": "/timezone/static/js/runtime-main.81bee160.js.map",
     "static/css/2.8b2fdb78.chunk.css": "/timezone/static/css/2.8b2fdb78.chunk.css",
-    "static/js/2.7b397ac0.chunk.js": "/timezone/static/js/2.7b397ac0.chunk.js",
-    "static/js/2.7b397ac0.chunk.js.map": "/timezone/static/js/2.7b397ac0.chunk.js.map",
+    "static/js/2.3221e64e.chunk.js": "/timezone/static/js/2.3221e64e.chunk.js",
+    "static/js/2.3221e64e.chunk.js.map": "/timezone/static/js/2.3221e64e.chunk.js.map",
     "index.html": "/timezone/index.html",
-    "precache-manifest.b03360210764ba5e2a52017abd083700.js": "/timezone/precache-manifest.b03360210764ba5e2a52017abd083700.js",
+    "precache-manifest.f838e625ca130a756aa81a444b196e2b.js": "/timezone/precache-manifest.f838e625ca130a756aa81a444b196e2b.js",
     "service-worker.js": "/timezone/service-worker.js",
     "static/css/2.8b2fdb78.chunk.css.map": "/timezone/static/css/2.8b2fdb78.chunk.css.map",
-    "static/css/main.1ce43a2e.chunk.css.map": "/timezone/static/css/main.1ce43a2e.chunk.css.map",
-    "static/js/2.7b397ac0.chunk.js.LICENSE.txt": "/timezone/static/js/2.7b397ac0.chunk.js.LICENSE.txt",
+    "static/css/main.dbd0b2e4.chunk.css.map": "/timezone/static/css/main.dbd0b2e4.chunk.css.map",
+    "static/js/2.3221e64e.chunk.js.LICENSE.txt": "/timezone/static/js/2.3221e64e.chunk.js.LICENSE.txt",
     "static/media/Tab.css": "/timezone/static/media/ShareTechMono.b8927cf9.otf",
-    "static/media/App.css": "/timezone/static/media/Viafont.8917a885.otf"
+    "static/media/App.css": "/timezone/static/media/Viafont.8917a885.otf",
+    "static/media/instructions.png": "/timezone/static/media/instructions.540bcf1f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.81bee160.js",
     "static/css/2.8b2fdb78.chunk.css",
-    "static/js/2.7b397ac0.chunk.js",
-    "static/css/main.1ce43a2e.chunk.css",
-    "static/js/main.c7a4f559.chunk.js"
+    "static/js/2.3221e64e.chunk.js",
+    "static/css/main.dbd0b2e4.chunk.css",
+    "static/js/main.f9c0771a.chunk.js"
   ]
 }
