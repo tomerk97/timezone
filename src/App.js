@@ -19,7 +19,6 @@ class App extends Component{
   }  
 
 
-
   handleChange=(newValue) =>{
     if(newValue!='')
     this.setState({ currentValue: newValue ,string:new Date().toLocaleString("en-US", {timeZone: newValue}) });
@@ -37,7 +36,7 @@ class App extends Component{
 
 
   render(){ 
-
+    document.title="Time Zones";
     const timezonestyle={
     'width': '24em',
     'border-radius':'10px',
@@ -125,10 +124,3 @@ class App extends Component{
 
 export default App;
 
-
-  /*
-Europe/London`
-
-
-
-  */
