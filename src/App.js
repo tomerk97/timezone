@@ -5,19 +5,31 @@ import 'react-bootstrap-timezone-picker/dist/react-bootstrap-timezone-picker.min
 import './App.css';
 import Tab from './Tab';
 import AnalogClock from 'analog-clock-react';
+import TimeMachine from './output';
+import instructions from './pictures/instructions.png';
+import Modal from 'react-awesome-modal';
+import ReactTooltip from 'react-tooltip';
 
 
 
 class App extends Component{
   constructor(){
     super();
-    this.state = { currentValue: 'Asia/Jerusalem', absolute: false, string:new Date().toLocaleString("en-US", {timeZone: 'Asia/Jerusalem'}) };
+    this.state = { 
+      currentValue: 'Asia/Jerusalem', 
+      absolute: false, 
+      string:new Date().toLocaleString("en-US", {timeZone: 'Asia/Jerusalem'}),
+      wanhou:'',
+      wanmin:'',
+      show:false
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
     this.handleClick = this.handleClick.bind(this);
 
   }  
 
+  
 
   handleChange=(newValue) =>{
     if(newValue!='')
@@ -34,6 +46,25 @@ class App extends Component{
   }
   
 
+handlehhourchange=(a)=>{
+ this.setState({wanhou:a.target.value});
+}
+handlehminuteschange=(a)=>{
+ this.setState({wanmin:a.target.value});
+}
+  
+
+  openModal() {
+        this.setState({
+            visible : true
+        });
+    }
+
+    closeModal() {
+        this.setState({
+            visible : false
+        });
+    }
 
   render(){ 
     document.title="Time Zones";
@@ -47,6 +78,7 @@ class App extends Component{
     'color':'wheat',
     'cursor':'pointer'
     };
+
    
 
     let str= this.state.string;  
@@ -110,9 +142,46 @@ class App extends Component{
       </div>
 
       <div  id="Analog"> 
+       <h1> Current time in {this.state.currentValue.replace('/','-')}:</h1>
         <AnalogClock {...options}/>
         <div id="tzline"><p>Time: {this.state.string}</p></div>
       </div>
+
+
+      <div id="MeetArange">
+        <div id='inputdiv'>
+          <h1>Hour:</h1>
+          <input type="number" min='0' max='24' onChange={this.handlehhourchange}></input>
+          <h1>Minutes:</h1>
+          <input type="number" min='0' max='60' onChange={this.handlehminuteschange}></input>
+          <h1>Set time zone from the above</h1>
+        </div>
+        <TimeMachine
+              wantedhour={this.state.wanhou}
+              wantedminutes={this.state.wanmin}
+              TimeZone={this.state.currentValue}
+          />
+    
+      </div>
+
+      <section style={{'place-self':'end'}}>
+                <button type="button"  onClick={() => this.openModal()}> Instructions</button>
+                <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
+                    <div id="modaldiv">
+                        <h1>Instructions</h1>
+                        <ol>
+                        <li>Choose time zone from list or popular</li>
+                        <li>Set abroad time HH/MM - 24-Hours format</li>
+                        <li>Now you can see your time, and the time abroad</li>
+                        </ol>
+                        <a href="javascript:void(0);" id="close" onClick={() => this.closeModal()}> 
+                          <a data-tip="Cool, I got it.">🤙</a>
+                          <ReactTooltip place="bottom" value="a" type="dark" effect="float"/>
+
+                         </a>
+                    </div>
+                </Modal>
+      </section>
 
 
     </div>

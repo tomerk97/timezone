@@ -129,3 +129,76 @@ html{
 p{
   font-family:ShareTechMono;
 }
+
+#MeetArange{
+  margin-left: 4em;
+  margin-top: 1em;
+}
+#MeetArange input{
+  height:20px; 
+  width:60px;
+  border-radius: 10px;
+  border:2px solid #ABD6DFFF;
+  padding: 0.1em 1em;
+  margin-right: 1em;
+}
+
+#inputdiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.modal {
+  font-size: 12px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
+section li{
+  color:white;
+}
+section h1{
+  text-align: center;
+  color:white;
+}
+
+#modaldiv{
+  height: 100%;
+  background-color:cornflowerblue;
+  border-radius: 10px;
+  border:none;
+}
+#close{
+  text-decoration: none;
+  text-align: center;
+  margin-left: 42%;
+  font-size: 4em;
+}
