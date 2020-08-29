@@ -2,7 +2,7 @@
   "name": "great",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://tomerk97.github.io/timezone/",
+  "homepage": "https://tomerk97.github.io/timezone/",
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
@@ -20,8 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
