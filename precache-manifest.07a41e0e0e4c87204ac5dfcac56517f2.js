@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "32ce8a895c053c4508fdc3c57707eda4",
+    "revision": "caa21cdbf72592d608c43a48feaf0e67",
     "url": "/timezone/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/timezone/static/css/2.8b2fdb78.chunk.css"
   },
   {
-    "revision": "a78f21a73a61b5a6976c",
+    "revision": "757c761d042e1e31c58e",
     "url": "/timezone/static/css/main.4618a017.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/timezone/static/js/2.7b397ac0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a78f21a73a61b5a6976c",
-    "url": "/timezone/static/js/main.48f2225a.chunk.js"
+    "revision": "757c761d042e1e31c58e",
+    "url": "/timezone/static/js/main.124a34c3.chunk.js"
   },
   {
     "revision": "206860e6d1de76ebf47a",
