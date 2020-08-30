@@ -188,7 +188,7 @@ handlehminuteschange=(a)=>{
                       <input class="hourinput"  type="number" placeholder="HH" min='0' max='24' onChange={this.handlehhourchange}></input>
                       <h1>:</h1>
                       <input class="hourinput" type="number" placeholder="MM" min='0' max='60' onChange={this.handlehminuteschange}></input>         
-                </div>
+                
                 <div id="timezonescindpicker">
                  <TimezonePicker 
                     absolute      = {false}
@@ -198,6 +198,7 @@ handlehminuteschange=(a)=>{
                     id= "Timezone" 
                     style = {timezonesecondstyle}        
                   />
+                </div>
                 </div>
 
                 <div id="TimeMachine">
