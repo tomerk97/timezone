@@ -100,7 +100,8 @@ handlehminuteschange=(a)=>{
     'cursor':'pointer',
     'position':'absolute',
     'z-index':'9998',
-    'grid-column-start':'1'
+    'grid-column-start':'1',
+    'margin-bottom':"3em"
   };
    
 

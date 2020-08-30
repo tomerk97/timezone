@@ -52,7 +52,7 @@
 #nav{
   display: block;
   width: 100%;
-  height: 3em;
+  height: 2.5em;
   background-color:steelblue;
   position: absolute;
   top:0;
@@ -96,7 +96,7 @@ grid-column-start: 1;
 }
 
  #container{
-  margin-top: 1.2em;
+  margin-top: 0.8em;
   display:grid;
   grid-template-columns:1fr 1fr 1fr ;
   grid-template-rows: 45% 55%;
@@ -128,7 +128,7 @@ grid-column-start: 1;
 
 }
 html{
-   background-image: linear-gradient(to right, #ffffff,#ece9e6);
+   background-color: gray;
 
 } 
 
