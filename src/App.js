@@ -36,13 +36,13 @@ class App extends Component{
   handleChange=(newValue) =>{
     if(newValue!='')
     this.setState({ currentValue: newValue ,string:new Date().toLocaleString("en-US", {timeZone: newValue}) });
-    console.log(this.state.currentValue);
+
   }
 
   handleSecondChange=(newValue) =>{
     if(newValue!='')
     this.setState({ currentSecondValue: newValue ,string:new Date().toLocaleString("en-US", {timeZone: newValue}) });
-    console.log(this.state.currentValue);
+
   }
 
 
@@ -108,7 +108,7 @@ handlehminuteschange=(a)=>{
     let hours =str.slice(-11,-9); 
     let minutes =str.slice(-8,-6); 
     let seconds = new Date().getSeconds(); 
-    console.log(minutes);      
+    
     let options={
       useCustomTime: true,    // set this to true
       width: "150px",
@@ -174,7 +174,7 @@ handlehminuteschange=(a)=>{
         <div id="tzline"><p>Time: {this.state.string}</p></div>
       </div>
 
-          
+
           <div id="havemeetdiv"><p id="havemeetpar">Your meeting with the Chinese guy begins at 10:00 and wanna know what this time is it in Israel?</p></div>
 
           <div id="MeetArange">
