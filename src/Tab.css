@@ -8,18 +8,23 @@
 button{
 /*		display: inline;
 		justify-content: center;*/
-		font-size:1em;
+		font-size:0.7em;
 		height:3em;
-		width:10em;
-		text-align:center;
-		font-family: ShareTechMono;
-		font-weight: bolder;
+		width:8em;
 		margin-right: 1em;
 		margin-bottom: 1em;
-		border-radius: 20px 10%;
-		background: #ABD6DFFF;
+		text-align:center;
+		/*font-family: ShareTechMono;*/	
+		font-family: Roboto;
+		letter-spacing: 1px;
+		font-weight: thin;
+		/*margin-right: 1em;*/
+		color:white;
+		border-radius: 10px;
+		background-image:linear-gradient(#1c92d2 ,#1c92d2) ;
 		cursor: pointer;
-		box-shadow: 1px 1px 10px 2px gray;
+		border:none;
+		
 }
 button:active{
 	transform: scale(0.95);

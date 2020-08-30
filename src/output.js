@@ -33,7 +33,7 @@ let string;
 	if(wantedhour!=''&& wantedminutes!='' && TimeZone.length>0 && TimeZone!='Asia/Jerusalem')
 	return <h1>{a}</h1>;
 	else
-		return <h1></h1>
+		return <h1></h1>;
 
 
 }

@@ -9,6 +9,7 @@ import TimeMachine from './output';
 import instructions from './pictures/instructions.png';
 import Modal from 'react-awesome-modal';
 import ReactTooltip from 'react-tooltip';
+import "typeface-roboto";
 
 
 
@@ -17,6 +18,7 @@ class App extends Component{
     super();
     this.state = { 
       currentValue: 'Asia/Jerusalem', 
+      currentSecondValue: 'Asia/Jerusalem', 
       absolute: false, 
       string:new Date().toLocaleString("en-US", {timeZone: 'Asia/Jerusalem'}),
       wanhou:'',
@@ -36,6 +38,13 @@ class App extends Component{
     this.setState({ currentValue: newValue ,string:new Date().toLocaleString("en-US", {timeZone: newValue}) });
     console.log(this.state.currentValue);
   }
+
+  handleSecondChange=(newValue) =>{
+    if(newValue!='')
+    this.setState({ currentSecondValue: newValue ,string:new Date().toLocaleString("en-US", {timeZone: newValue}) });
+    console.log(this.state.currentValue);
+  }
+
 
   handleClick=(Value)=>{
    this.handleChange(Value);
@@ -69,16 +78,30 @@ handlehminuteschange=(a)=>{
   render(){ 
     document.title="Time Zones";
     const timezonestyle={
-    'width': '24em',
-    'border-radius':'10px',
-    'padding':'10px',
-    'background-color':'cadetblue',
+    'width': '21em',
+    'border-radius':'5px',
+    'padding':'3px',
+    'background-color':'white',
     'border':'1px solid black',
-    'font-size':'1em',
+    'font-size':'0.8em',
     'color':'wheat',
-    'cursor':'pointer'
+    'cursor':'pointer',
+    'position':'absolute',
+    'z-index':'9999'
     };
-
+    const timezonesecondstyle={
+     'width': '21em',
+    'border-radius':'5px',
+    'padding':'3px',
+    'background-color':'white',
+    'border':'1px solid black',
+    'font-size':'0.8em',
+    'color':'wheat',
+    'cursor':'pointer',
+    'position':'absolute',
+    'z-index':'9998',
+    'grid-column-start':'1'
+  };
    
 
     let str= this.state.string;  
@@ -88,15 +111,15 @@ handlehminuteschange=(a)=>{
     console.log(minutes);      
     let options={
       useCustomTime: true,    // set this to true
-      width: "220px",
+      width: "150px",
       border: true,
-      borderColor: "bisque",
-      baseColor: "#ABD6DFFF",
+      borderColor: "black",
+      baseColor: "white",
       centerColor: "steelblue",
       handColors: {
       second: "transparent",
-      minute: "#fff",
-      hour: "#fff"
+      minute: "red",
+      hour: "black"
       },
 
       "seconds": null,   // set your
@@ -117,7 +140,7 @@ handlehminuteschange=(a)=>{
       </div>
 
       <div id="divone" >
-        <p id="choose" >Choose time zone:</p>
+        <p id="choose" >Choose time zone from list or populars:</p>
         <TimezonePicker 
             absolute      = {false}
             defaultValue  = 'Asia/Jerusalem'
@@ -136,7 +159,10 @@ handlehminuteschange=(a)=>{
         <Tab onClick={()=>this.handleClick('Asia/Shanghai')} value="China"/>
         <Tab onClick={()=>this.handleClick('Europe/London')} value="London"/>
         <Tab onClick={()=>this.handleClick('Europe/Berlin')} value="Berlin"/>
+        <Tab onClick={()=>this.handleClick('Europe/Madrid')} value="Madrid"/>
+        <Tab onClick={()=>this.handleClick('Europe/Rome')} value="Rome"/>
         <Tab onClick={()=>this.handleClick('Pacific/Honolulu')} value="Hawaii"/>  
+        <Tab onClick={()=>this.handleClick('America/Denver')} value="Denver"/> 
         <Tab onClick={()=>this.handleClick('America/Los_Angeles')} value="Los Angeles"/>
         <Tab onClick={()=>this.handleClick('America/New_York')} value="New York"/>
         <Tab onClick={()=>this.handleClick('America/Chicago')} value="Chicago"/>
@@ -144,46 +170,62 @@ handlehminuteschange=(a)=>{
 
       <div  id="Analog"> 
        <h1> Current time in {this.state.currentValue.replace('/','-')}:</h1>
-        <AnalogClock {...options}/>
+        <div style={{'margin-left':'12%'}}><AnalogClock {...options}/></div>
         <div id="tzline"><p>Time: {this.state.string}</p></div>
       </div>
 
+          
+          <div id="havemeetdiv"><p id="havemeetpar">Your meeting with the Chinese guy begins at 10:00 and wanna know what this time is it in Israel?</p></div>
 
-      <div id="MeetArange">
-      <h1>Enter the time abroad end get your local time:</h1>
-        <div id='inputdiv'>
-          <h1>Hour:</h1>
-          <input type="number" placeholder="HH" min='0' max='24' onChange={this.handlehhourchange}></input>
-          <h1>Minutes:</h1>
-          <input type="number" placeholder="MM" min='0' max='60' onChange={this.handlehminuteschange}></input>
-          <h1>Set time zone from the above</h1>
-        </div>
-        <TimeMachine
-              wantedhour={this.state.wanhou}
-              wantedminutes={this.state.wanmin}
-              TimeZone={this.state.currentValue}
-          />
-    
-      </div>
+          <div id="MeetArange">
+          <h1>Enter the time abroad end get your local time:</h1>
+           
 
-      <section style={{'place-self':'end'}}>
-                <button type="button"  onClick={() => this.openModal()}> Instructions</button>
-                <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
-                    <div id="modaldiv">
-                        <h1>Instructions</h1>
-                        <ol>
-                        <li>Choose time zone from list or popular</li>
-                        <li>Set abroad time HH/MM - 24-Hours format</li>
-                        <li>Now you can see your time, and the time abroad</li>
-                        </ol>
-                        <a href="javascript:void(0);" id="close" onClick={() => this.closeModal()}> 
-                          <a data-tip="Cool, I got it.">🤙</a>
-                          <ReactTooltip place="bottom" value="a" type="dark" effect="float"/>
+            <div id="timezonestringdiv">
+                <div id='inputdiv'>
+                      <input class="hourinput"  type="number" placeholder="HH" min='0' max='24' onChange={this.handlehhourchange}></input>
+                      :
+                      <input class="hourinput" type="number" placeholder="MM" min='0' max='60' onChange={this.handlehminuteschange}></input>         
+                </div>
+                <div id="timezonescindpicker">
+                 <TimezonePicker 
+                    absolute      = {false}
+                    defaultValue  = 'Asia/Jerusalem'
+                    placeholder   = "Select timezone..."
+                    onChange      = {this.handleSecondChange}
+                    id= "Timezone" 
+                    style = {timezonesecondstyle}        
+                  />
+                </div>
 
-                         </a>
-                    </div>
-                </Modal>
-      </section>
+                <div id="TimeMachine">
+                <TimeMachine
+                      wantedhour={this.state.wanhou}
+                      wantedminutes={this.state.wanmin}
+                      TimeZone={this.state.currentSecondValue}
+                  />
+                </div>
+            </div>
+          </div>
+
+          <section>
+                    <button type="button"  onClick={() => this.openModal()}> 📑  Instructions</button>
+                    <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
+                        <div id="modaldiv">
+                            <h1>Instructions</h1>
+                            <ol>
+                            <li>Choose time zone from the list</li>
+                            <li>Set abroad time HH/MM - 24-Hours format</li>
+                            <li>Now you can see your time, and the time abroad</li>
+                            </ol>
+                            <a href="javascript:void(0);" id="close" onClick={() => this.closeModal()}> 
+                              <a data-tip="Cool, I got it.">🤙</a>
+                              <ReactTooltip place="bottom" value="a" type="dark" effect="float"/>
+
+                             </a>
+                        </div>
+                    </Modal>
+          </section>
 
 
     </div>
