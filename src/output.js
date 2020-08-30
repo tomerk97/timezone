@@ -30,7 +30,7 @@ let string;
 
 	let a = `Your time: ${here.toString().slice(15,24)} \n ${TimeZone.replace('/','-').replace('_','-')}: ${there.toString().slice(15,24)} `;
 	// let a = `Here: ${here.toString().slice(15,24)} \n Toronto: ${there.toString().slice(15,24)}`;
-	if(wantedhour!=''&& wantedminutes!='' && TimeZone.length>0)
+	if(wantedhour!=''&& wantedminutes!='' && TimeZone.length>0 && TimeZone!='Asia/Jerusalem')
 	return <h1>{a}</h1>;
 	else
 		return <h1></h1>

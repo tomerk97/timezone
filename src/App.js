@@ -150,11 +150,12 @@ handlehminuteschange=(a)=>{
 
 
       <div id="MeetArange">
+      <h1>Enter the time abroad end get your local time:</h1>
         <div id='inputdiv'>
           <h1>Hour:</h1>
-          <input type="number" min='0' max='24' onChange={this.handlehhourchange}></input>
+          <input type="number" placeholder="HH" min='0' max='24' onChange={this.handlehhourchange}></input>
           <h1>Minutes:</h1>
-          <input type="number" min='0' max='60' onChange={this.handlehminuteschange}></input>
+          <input type="number" placeholder="MM" min='0' max='60' onChange={this.handlehminuteschange}></input>
           <h1>Set time zone from the above</h1>
         </div>
         <TimeMachine
