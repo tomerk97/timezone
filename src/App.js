@@ -35,7 +35,7 @@ class App extends Component{
 
   handleChange=(newValue) =>{
     if(newValue!='')
-    this.setState({ currentValue: newValue ,string:new Date().toLocaleString("en-US", {timeZone: newValue}) });
+    this.setState({ currentValue: newValue ,string:new Date().toLocaleString("en-US", {timeZone: newValue}).replace('12','00') });
 
   }
 
@@ -132,11 +132,12 @@ handlehminuteschange=(a)=>{
 
     return (
   <div id="bodywrap">  
-  <div id = "nav">
+    <div id = "nav">
         <ul id="navlist">
          <li  style={{'text-transform':'uppercase'}} id="online">Online tool to find other time zones</li>
         </ul>          
-      </div>  
+    </div> 
+
     <div id="containertop">
       
 
