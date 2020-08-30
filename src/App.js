@@ -131,14 +131,14 @@ handlehminuteschange=(a)=>{
 
 
     return (
+  <div id="bodywrap">  
+  <div id = "nav">
+        <ul id="navlist">
+         <li  style={{'text-transform':'uppercase'}} id="online">Online tool to find other time zones</li>
+        </ul>          
+      </div>  
+    <div id="containertop">
       
-    <div id="container">
-      <div id = "nav">
-      <ul id="navlist">
-        <li  style={{'text-transform':'uppercase'}} id="online">Online tool to find other time zones</li>
-        </ul>
-
-      </div>
 
       <div id="divone" >
         <p id="choose" >Choose time zone from list or populars:</p>
@@ -149,9 +149,7 @@ handlehminuteschange=(a)=>{
             onChange      = {this.handleChange}
             id= "Timezone" 
             style = {timezonestyle}        
-          />
-
-          
+          />    
       </div>
 
       <div id="buttonsdiv">
@@ -174,15 +172,17 @@ handlehminuteschange=(a)=>{
         <div style={{'margin-left':'12%'}}><AnalogClock {...options}/></div>
         <div id="tzline"><p>Time: {this.state.string}</p></div>
       </div>
+   </div>
 
 
-          <div id="havemeetdiv"><p id="havemeetpar"><span style={{'background-color':"#ece9e6"}}>Your meeting with the Chinese guy begins at
-           10:00 and you wanna know what is this time is it in Israel?</span></p></div>
+   <div id="containerbtm">
+      <div id="havemeetdiv">
+           <p id="havemeetpar"><span style={{'background-color':"#ece9e6"}}>Your meeting with the Chinese guy begins at
+           10:00 and you wanna know what is this time is it in Israel?</span></p>
+      </div>
 
-          <div id="MeetArange">
-          <h1>Enter the time abroad end get your local time:</h1>
-           
-
+      <div id="MeetArange">
+            <h1>Enter the time abroad end get your local time:</h1>
             <div id="timezonestringdiv">
                 <div id='inputdiv'>
                       <input class="hourinput"  type="number" placeholder="HH" min='0' max='24' onChange={this.handlehhourchange}></input>
@@ -209,9 +209,9 @@ handlehminuteschange=(a)=>{
                   />
                 </div>
             </div>
-          </div>
+      </div>
 
-          <section>
+      <section>
                     <button type="button"  onClick={() => this.openModal()}> 📑  Instructions</button>
                     <Modal visible={this.state.visible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
                         <div id="modaldiv">
@@ -228,10 +228,11 @@ handlehminuteschange=(a)=>{
                              </a>
                         </div>
                     </Modal>
-          </section>
-
-
+      </section>
     </div>
+
+   
+  </div>
     );
   }
 };
