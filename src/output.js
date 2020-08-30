@@ -5,27 +5,22 @@ import './output.css';
 
 
 function changeTimezone(date, ianatz) {
-
-
-  var invdate = new Date(date.toLocaleString('en-US', {
-    timeZone: ianatz
-  }));
-
-
-  var diff = date.getTime() - invdate.getTime();
-
-  return new Date(date.getTime() + diff);
+  let mydate =new Date();
+  var invdate = new Date(mydate.toLocaleString('en-US', {
+    timeZone: ianatz}
+  ));
+  var diff = invdate.getTime() - mydate.getTime();
+  return new Date(date.getTime() - diff);
 
 }
 
 const TimeMachine =({wantedhour , wantedminutes,TimeZone}) =>{
-let string;
-	let c = parseInt(wantedhour);
-	let b = parseInt(wantedminutes);
-	console.log(c);
-	var there = new Date(null,null,null,wantedhour,wantedminutes,0);
+	let string;
+	var there = new Date(null,null,null,wantedhour,wantedminutes);
 	var here = changeTimezone(there, TimeZone);
-	here.setMinutes(here.getMinutes()-20);
+	console.log("here1",here);		
+	// here.setMinutes(here.getMinutes());
+
 
 
 	let a = `Your time: ${here.toString().slice(15,24)} \n ${TimeZone.replace('/','-').replace('_','-')}: ${there.toString().slice(15,24)} `;
