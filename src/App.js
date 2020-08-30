@@ -177,7 +177,7 @@ handlehminuteschange=(a)=>{
 
 
           <div id="havemeetdiv"><p id="havemeetpar"><span style={{'background-color':"#ece9e6"}}>Your meeting with the Chinese guy begins at
-           10:00 and wanna know what this time is it in Israel?</span></p></div>
+           10:00 and you wanna know what is this time is it in Israel?</span></p></div>
 
           <div id="MeetArange">
           <h1>Enter the time abroad end get your local time:</h1>
