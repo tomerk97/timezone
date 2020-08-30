@@ -41,7 +41,7 @@ class App extends Component{
 
   handleSecondChange=(newValue) =>{
     if(newValue!='')
-    this.setState({ currentSecondValue: newValue ,string:new Date().toLocaleString("en-US", {timeZone: newValue}) });
+    this.setState({ currentSecondValue: newValue });
 
   }
 

@@ -17,9 +17,9 @@ function changeTimezone(date, ianatz) {
 const TimeMachine =({wantedhour , wantedminutes,TimeZone}) =>{
 	let string;
 	var there = new Date(null,null,null,wantedhour,wantedminutes);
-	var here = changeTimezone(there, TimeZone);
-	console.log("here1",here);		
-	// here.setMinutes(here.getMinutes());
+	var here = changeTimezone(there, TimeZone);	
+	if(wantedhour>24||wantedminutes>60)
+		return <h1></h1>;
 
 
 
